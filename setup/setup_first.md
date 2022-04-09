@@ -7,6 +7,7 @@
 # disable port 22 ssh
 # login by ssk-key
 
+#firewall/iptable/ufw
  
 #adduser 
 chusermod
@@ -23,6 +24,10 @@ sudo nopasswd
 # install nodejs , npm , yard
 
 # docker and docker-compose
+
+#domain 
+
+#nginx / ssl
 
 
 
