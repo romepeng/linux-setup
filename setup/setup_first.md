@@ -16,6 +16,9 @@ sudo nopasswd
 #tools app
 #wget curl git fuse tree net-tool
 
+#git config
+
+
 #vim and neovim
 
 #python3 && pip3
@@ -23,7 +26,7 @@ sudo nopasswd
 
 # install nodejs , npm , yard
 
-# docker and docker-compose
+# docker and docker-compose  ok  install_docker.sh wget -O - github
 
 #domain 
 
