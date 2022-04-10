@@ -2,5 +2,5 @@
   name = romepeng
   email = romepeng@outlook.com
 [core]
-  edit = vi
+  edit = nvim
  
