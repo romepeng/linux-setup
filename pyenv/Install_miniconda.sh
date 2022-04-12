@@ -7,5 +7,4 @@ echo -e "\t start installsilent miniconda"
 MINICONDA_PATH="$HOME/miniconda"
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-$(uname -m).sh -O  ~/miniconda.sh && bash  ~/miniconda.sh -b -p ${MINICONDA_PATH}
 
-${MINICONDA_PATH}/bin/conda init
-source  ~/.bashrc
+${MINICONDA_PATH}/bin/conda init && source  ~/.bashrc
