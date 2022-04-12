@@ -48,6 +48,6 @@ sudo nopasswd
 
 # or use select $VAR and condition to install
 #for example $ARCH=amd64 0r arm64  
-
+https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-${uname-m}.sh
 
 
