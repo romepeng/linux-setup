@@ -1,6 +1,13 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+#check_system_os and arch(amd64 or arm64)
+#os
+source /etc/os_release
+#arch
+dpkg --print-architecture
 
 # update && upgrade
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 
 #login security
 # disable root login 
@@ -33,6 +40,14 @@ sudo nopasswd
 #nginx / ssl
 
 
+
+
+# to different os or arch(cpu) 
+#you can write diff srcipt on github to wget
+# for example install docker
+
+# or use select $VAR and condition to install
+#for example $ARCH=amd64 0r arm64  
 
 
 
