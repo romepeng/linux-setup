@@ -62,8 +62,7 @@ function set_python3_install_pip3(){
 function install_tool_app(){
 	clear
 	echo
-	sudo apt install tree 
-	#net-tools 
+	sudo apt install tree net-tools 
 	#fuse
 }
 
