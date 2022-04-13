@@ -62,9 +62,7 @@ function set_python3_install_pip3(){
 function install_tool_app(){
 	clear
 	echo
-	sudo apt install tree 
-	#net-tools 
-	#fuse
+	sudo apt install tree net-tools  fuse
 }
 
 # install docker and docker commpose
@@ -103,24 +101,9 @@ install_nodejs(){
 install_nvim(){
 	clear
 	# for ubuntu
-	sudo apt install fuse libfuse2
-	sudo modprobe fuse
-	sudo groupadd fuse
-	user="$(whoami)"
-	sudo usermod -a -G fuse $user
-	
-	sudo apt update
-	sudo apt install snapd
-
-	sudo snap install nvim --classic
-
-	#curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-	#sudo chmod u+x nvim.appimage
-	#./nvim.appimage --appimage-extract
-	#./squashfs-root/AppRun --version
-	#sudo mv squashfs-root /
-        #sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-	
+	sudo add-apt-repository ppa:neovim-ppa/unstable
+	sudo apt-get update
+	sudo apt-get install neovim
 	nvim --version
 
 }
