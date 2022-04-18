@@ -1,0 +1,18 @@
+# /etc/systemd/system/davfs-jgy.service, rclone-OD.service, s3fs-oracle.service
+
+[Unit]
+Description=Run service as user rome
+DefaultDependencies=no
+After=network.target
+
+[Service]
+Type=simple
+User=rome
+Group=admin
+ExecStart=/home/rome/s3fs-oracleos-startupt.sh
+
+TimeoutStartSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
