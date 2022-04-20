@@ -16,5 +16,3 @@ echo -e "your damon is $DAMON"
 ~/.acme.sh/acme.sh  --issue -d $DAMON  --standalone
 
 ~/.acme.sh/acme.sh --installcert -d $DAMON --key-file /root/private.key --fullchain-file /root/cert.crt
-
-echo 0 1 1 * *   bash /root/xray-cert-renew.sh  >> crontab
