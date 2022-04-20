@@ -3,7 +3,7 @@ apt update -y && apt install -y curl
 
 apt install -y socat
 
-curl https://get.acme.sh | sh -s romepeng@outlook.com
+curl https://get.acme.sh | sh -s email=romepeng@outlook.com
 
 echo "alias acme.sh='~/.acme.sh/acme.sh'" >> ~/.bashrc
 source ~/.bashrc
