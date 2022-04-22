@@ -2,6 +2,9 @@
 
 sudo -i
 apt install nginx
+
+apt apt install socat -y
+
 # http://rome.tk
 
 #https://linoxide.com/setup-nginx-with-lets-encrypt-acme-on-ubuntu/
