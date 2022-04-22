@@ -15,6 +15,8 @@ source ~/.bashrc
 
 acme.sh --issue -d rome.tk --nginx
 
+# acme.sh --issue -d  romepeng.tk --nginx
+
 mkdir -p /etc/nginx/certs/rome.tk
 
 acme.sh --install-cert -d rome.tk  \
