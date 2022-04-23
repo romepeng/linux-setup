@@ -18,10 +18,16 @@ acme.sh --issue -d rome.tk --nginx
 # acme.sh --issue -d  romepeng.tk --nginx
 
 mkdir -p /etc/nginx/certs/rome.tk
+mkdir -p /etc/nginx/certs/romepeng.tk
 
 acme.sh --install-cert -d rome.tk  \
 --key-file       /etc/nginx/certs/rome.tk/key.pem \
 --fullchain-file /etc/nginx/certs/rome.tk/cert.pem  \
+--reloadcmd     "service nginx force-reload"
+
+acme.sh --install-cert -d romepeng.tk  \
+--key-file       /etc/nginx/certs/romepeng.tk/key.pem \
+--fullchain-file /etc/nginx/certs/romepeng.tk/cert.pem  \
 --reloadcmd     "service nginx force-reload"
 
 #sudo vi  /etc/nginx/sites-available/rome.tk
