@@ -19,5 +19,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 # add git history 
-zsh-autosuggestions plugins/zsh-syntax-highlighting to .zshrc
+#zsh-autosuggestions plugins/zsh-syntax-highlighting to .zshrc
 # source ~/.zshrc
