@@ -2,4 +2,4 @@ open cdm shell
 open vscode
 . code
 
-install extension 
+install extension G
