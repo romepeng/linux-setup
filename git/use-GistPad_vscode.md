@@ -7,5 +7,5 @@ login GistPad by github in vscode
 
 restart vscode
 see left tab notes
-now you can 
+now you can open your
 
