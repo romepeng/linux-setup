@@ -1,6 +1,7 @@
 #!/bin/sh
 #Install Oh My Zsh Framework
-#
+#https://www.cherryservers.com/blog/how-to-install-and-start-using-oh-my-zsh-on-ubuntu-20-04
+
 sudo apt update
 sudo apt install zsh -y
 which zsh
