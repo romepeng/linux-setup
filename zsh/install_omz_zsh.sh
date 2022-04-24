@@ -1,6 +1,6 @@
 #!/bin/sh
 #Install Oh My Zsh Framework
-
+#
 sudo apt update
 sudo apt install zsh -y
 which zsh
