@@ -1,1 +1,1 @@
-open cdm
+open cd
