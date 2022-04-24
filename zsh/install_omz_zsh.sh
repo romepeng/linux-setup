@@ -21,3 +21,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 # add git history colored-man-pages  jsontools
 #zsh-autosuggestions plugins/zsh-syntax-highlighting to .zshrc
 # source ~/.zshrc
+# install 
