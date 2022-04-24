@@ -3,7 +3,7 @@ open vscode
 . code
 
 install extension GistPad
-login 
+login Git
 restart vscode
 see left tab notes
 
