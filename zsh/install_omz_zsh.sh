@@ -26,4 +26,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 vi ~/.zshrc 
 #add
 # bindkey  "^[[1~"   beginning-of-line
-#bindkey  "^[[4~"   end-of-line
+# bindkey  "^[[4~"   end-of-line
