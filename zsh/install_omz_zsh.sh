@@ -1,4 +1,5 @@
 #!/bin/sh
+sudo apt update
 
 sudo apt install zsh
 #https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
