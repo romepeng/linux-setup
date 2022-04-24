@@ -2,7 +2,7 @@
 sudo apt update
 sudo apt install zsh -y
 which zsh
-
+udo chsh -s /usr/bin/zsh
 
 #https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
 
