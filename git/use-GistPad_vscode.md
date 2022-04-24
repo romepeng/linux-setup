@@ -1,1 +1,1 @@
-open cd
+open cdm shell
