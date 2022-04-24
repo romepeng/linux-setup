@@ -3,6 +3,7 @@ sudo apt update
 sudo apt install zsh -y
 which zsh
 
+
 #https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
