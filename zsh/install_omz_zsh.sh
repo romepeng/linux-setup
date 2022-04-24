@@ -3,7 +3,7 @@ sudo apt update
 sudo apt install zsh -y
 which zsh
 
-udo chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh
 echo $SHELL
 
 
