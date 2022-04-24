@@ -1,8 +1,7 @@
 #!/bin/sh
 sudo apt update
 
-sudo apt install zsh -echo "$(tput setaf 3)"yellow text"$(tput sgr0)"
-
+sudo apt install zsh -y
 #https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
