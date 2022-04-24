@@ -7,3 +7,4 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
  ls /home/tecmint/.oh-my-zsh/themes/
  #vi ~/.zshrc
+ 
