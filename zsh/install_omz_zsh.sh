@@ -23,3 +23,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 # source ~/.zshrc
 
 # use end and Home keys
+bindkey  "^[[1~"   beginning-of-line
+bindkey  "^[[4~"   end-of-line
