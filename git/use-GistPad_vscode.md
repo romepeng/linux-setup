@@ -1,3 +1,3 @@
 open cdm shell
-open vsco
+open vscode
 . code
