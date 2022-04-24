@@ -1,2 +1,3 @@
 open cdm shell
 
+. code
