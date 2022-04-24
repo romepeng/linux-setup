@@ -4,7 +4,7 @@
 function check_system_arch(){
 	ARCH=$(dpkg --print-architecture)
 	echo -e " CPU arch : $ARCH"
-	source '/etc/os-release'  
+	source '/etc/os-release'
 	OS=${ID}
 	echo -e "linux OS : $OS"
 }
@@ -28,14 +28,14 @@ function set_root_passwd(){
 function adduser(){
 	clear
 	echo
-	read -p  "inpout add user's name :" user_name  
+	read -p  "inpout add user's name :" user_name
   	#echo "user name: $user_name"
 	if id -u $user_name > /dev/null 2>&1; then
 		echo "user $user_name exists"
 	else
 		sudo adduser $user_name
 	        sudo usermod -aG sudo  $user_name
-	       
+
 		#su $USER
 		touch /home/$user_name/.sudo_as_admin_successful
 	fi
@@ -75,7 +75,7 @@ function install_docker(){
   #  su - $user_name
   #else i
  	check_system_arch
-        
+
     	wget -O - https://raw.githubusercontent.com/romepeng/linux-onekey-setup/main/docker/install_docker_${ARCH}.sh | bash
   #fi
 }
@@ -93,8 +93,8 @@ install_nodejs(){
 	curl -sL install-node.vercel.app/lts  | sudo bash  && sudo npm install -g yarn
 	yarn global add neovim
 
-	echo -e "node version: $(node -v)" && 
-	echo -e "npm version: $(npm -v)" && 
+	echo -e "node version: $(node -v)" &&
+	echo -e "npm version: $(npm -v)" &&
 	echo -e "yarn version: $(yarn -v)"
 }
 
@@ -111,12 +111,22 @@ install_nvim(){
 
 install_vim-plug(){
 	clear
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  read -p "select vi type:vim/nvim: " VI
+  echo -e "vi type is ${VI}"
+
+  if  [ "${VI}" = "vim" ]; then
+    	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	sudo sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+  elif [ "${VI}" = 'nvim' ]; then
+    	sudo sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  else
+      echo -e "input  wrong editer name !"
+  fi
+
 	pip3 install pynvim --upgrade
-	pip3 install --user neovim	
+	pip3 install --user neovim
+
 }
 
 install_coc-nvim(){
@@ -131,12 +141,12 @@ install_coc-nvim(){
 nvim_config_plugins(){
 	NVIM_CONFIG_DIR=$HOME/.config/nvim
 	echo "nvim config and indtall plugins"
-	if [[ -d "$NVIM_CONFIG_DIR" ]]; then 
+	if [[ -d "$NVIM_CONFIG_DIR" ]]; then
 	       mv "$NVIM_CONFIG_DIR" "$NVIM_CONFIG_DIR.bak"
-	fi	    
+	fi
 	git clone --depth=1 https://github.com/romepeng/nvim-config.git "$NVIM_CONFIG_DIR"
 	echo "if install vim=plug ok"
-	
+
 	"$HOME/bin/nvim" -c "autocmd User vimplugComplete quitall" -c "vimplugsync " #TODO
 	echo -e "finish nvim config and plugins"
 
@@ -158,7 +168,7 @@ function menu(){
 	echo -e "\t https://github.com/romepeng\n"
 	echo -e "\t ---- cloud sever setup script ----\n"
 	echo -e "\t Uaer: $USER, Home: $HOME Dir: $PWD \n"
-	
+
 	echo -e "\t21. Set passwd "
  	echo -e "\t2. Add user "
   	echo -e "\t3. Set timezone "
@@ -175,12 +185,12 @@ function menu(){
 	echo -e "\t0. Exit menu \n\n "
 	echo -en "\t\tEnter an option: "
 	read  option
-} 
+}
 
 while [ 1 ]
 do
 	menu
-	case $option in	
+	case $option in
   	0)
     		break ;;
 	21)
@@ -196,7 +206,7 @@ do
 	6)
 		install_tool_app ;;
 	7)
-		git_config ;;	
+		git_config ;;
 	8)
 		install_nvim ;;
 	9)
