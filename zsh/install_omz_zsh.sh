@@ -22,4 +22,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 #zsh-autosuggestions plugins/zsh-syntax-highlighting to .zshrc
 # source ~/.zshrc
 
-# 
+# use 
