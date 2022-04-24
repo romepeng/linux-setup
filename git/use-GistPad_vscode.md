@@ -4,6 +4,7 @@ open vscode
 
 install extension GistPad
 login GistPad by github in vscode
+
 restart vscode
 see left tab notes
 
