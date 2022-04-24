@@ -3,4 +3,4 @@ open vscode
 . code
 
 install extension GistPad
-restart vode
+restart vscode
