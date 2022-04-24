@@ -7,5 +7,5 @@ login GistPad by github in vscode
 
 restart vscode
 see left tab notes
-now you can open your github reps on 
+now you can open your github reps on vscode
 
