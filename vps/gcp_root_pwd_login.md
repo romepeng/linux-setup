@@ -3,11 +3,13 @@ passwd
 
 vi /etc/ssh/sshd_config
 
-修改下面两个参数把no改为yes
-PermitRootLogin no
-PasswordAuthentication no
 
 
+PermitRootLogin yes
+
+PasswordAuthentication yes
+
+PubkeyAuthentication yes
 
 systemctl restart ssh
 
