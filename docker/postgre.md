@@ -16,6 +16,7 @@ volumes:
   
 #see logs:
 docker logs -f my_postgres
+
 #exit : ctrl + D
 
 # run psql:
@@ -29,7 +30,9 @@ docker exec -it my_postgress  psql -U postgres -C "create database my_database"
 #Connect using Python and psycopg2 
 
 python -m venv nyenv
+
 source myenv/bin/activate
+
 pip install psycopg2-binary
 
 # myscript.py to connent psql
