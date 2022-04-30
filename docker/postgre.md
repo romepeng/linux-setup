@@ -16,7 +16,7 @@ services:
       
     ports:
     
-      - "5432:5432"
+      - "54320:5432"
       
     volumes:
     
@@ -25,6 +25,13 @@ services:
 volumes:
 
   my_dbdata:
+  
+# pull
+docker login 
+
+# input username and passwd
+
+docker-compose up -d
   
 #see logs:
 docker logs -f my_postgres
@@ -53,7 +60,7 @@ import psycopg2
 
 conn = psycopg2.connect(
     host='localhost',
-    port=5432,
+    port=54320,
     dbname='my_database',
     user='postgres',
     password='my_password',
