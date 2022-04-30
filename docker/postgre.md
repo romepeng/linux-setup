@@ -1,17 +1,29 @@
 # docker-compose.yml:
 
 version: "3"
+
 services:
+
   db:
+  
     image: "postgres:13"
+    
     container_name: "my_postgres"
+    
     environment:
+    
       POSTGRES_PASSWORD: "my_password"
+      
     ports:
-      - "54320:5432"
+    
+      - "5432:5432"
+      
     volumes:
+    
       - my_dbdata:/var/lib/postgresql/data
+      
 volumes:
+
   my_dbdata:
   
 #see logs:
@@ -41,7 +53,7 @@ import psycopg2
 
 conn = psycopg2.connect(
     host='localhost',
-    port=54320,
+    port=5432,
     dbname='my_database',
     user='postgres',
     password='my_password',
