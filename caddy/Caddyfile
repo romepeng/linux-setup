@@ -10,8 +10,7 @@
 # this machine's public IP, then replace ":80" below with your
 # domain name.
 
-www.romepeng.tk 
-romepeng.tk {
+www.romepeng.tk,romepeng.tk {
 
         # Set this path to your site's directory.
         root * /var/www/html
