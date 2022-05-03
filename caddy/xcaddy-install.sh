@@ -12,3 +12,12 @@ sudo apt install xcaddy
 #the xcaddy command has two primary uses:
 #1.Compile custom caddy binaries
 #2.A replacement for go run while developing Caddy plugins
+
+
+#For example:
+
+#$ xcaddy list-modules
+#$ xcaddy run
+#$ xcaddy run --config caddy.json
+
+# xcaddy version
