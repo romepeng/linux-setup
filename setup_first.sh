@@ -153,6 +153,10 @@ install_miniconda(){
 	conda update -y conda
 }
 
+install_poetry(){
+	clear
+	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+}
 
 function menu(){
 	source /etc/os-release
@@ -177,7 +181,7 @@ function menu(){
 	echo -e "\t10. Install_vim-plug"
 	echo -e "\t11. Install_coc-nvim"
 	echo -e "\t12. Install_miniconda"
-
+	echo -e "\t13. Install_poetry"
 	echo -e "\t0. Exit menu \n\n "
 	echo -en "\t\tEnter an option: "
 	read  option
@@ -213,8 +217,9 @@ do
 		install_coc-nvim ;;
 	12)
 		install_miniconda ;;
-
-
+	13)    
+		install_poetry ;;
+	
 	*)
 		clear
 		echo -e "请输入正确的数字" ;;
