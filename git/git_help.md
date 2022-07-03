@@ -1,29 +1,45 @@
 #git help
 #connect
 ssh-key
+
 use exist id_rsa or ssh-keygen
 
 cat  ~/.ssh/id_rsa >  ~/.ssh/
+
 chmod 400 ~/.ssh/id_rsa
+
 if new keygen:
+
 cp ~/.ssh/id_rsa.pub to github.com
 
 ssh -T git@github.com
 
 Git 全局设置:
+
 git config --global user.name "romepeng"
+
 git config --global user.email "romepeng@outlook.com"
+
 or edit file:
+
 ~/.gitconfig
+
 check git config:
+
 git config list
 
 echo "# helpme" >> README.md
+
 git init
+
 git add README.md
+
 git commit -m "first commit"
+
 git branch -M main
+
 git remote add origin git://github.com:romepeng/helpme.git
+
 git push -u origin main
 
 分支
