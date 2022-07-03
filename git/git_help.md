@@ -26,7 +26,7 @@ or edit file:
 
 check git config:
 
-git config list
+git config --list
 
 echo "# helpme" >> README.md
 
@@ -43,27 +43,39 @@ git remote add origin git://github.com:romepeng/helpme.git
 git push -u origin main
 
 分支
+
 git branch 
+
 git branch dev
 
 git switch -c dev / checkout -b dev
+
 git switch / checkout master
 
 git merge master
+
 git branch -d dev
 
-覆盖本地
+覆盖本地:
+
 git fetch --all
+
 git reset --hard origin/master
 
 PULL: 与push相反
+
 git pull origin master:master
+
 git pull origin master 
+
 git pull (已经关联）
 
 clone reps:
+
 git clone git@github.com:romepeng/linux-onekey-setup.git
+
 git files, raw cp url:
+
 wget https://raw.githubusercontent.com/romepeng/linux-onekey-setup/main/setup_first.sh
 
 
