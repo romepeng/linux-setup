@@ -181,7 +181,8 @@ function menu(){
 	echo -e "\t10. Install_vim-plug"
 	echo -e "\t11. Install_coc-nvim"
 	echo -e "\t12. Install_miniconda"
-
+	echo -e "\t13. Install_ssl_onekey_cfapi"
+	
 	echo -e "\t0. Exit menu \n\n "
 	echo -en "\t\tEnter an option: "
 	read  option
@@ -217,6 +218,8 @@ do
 		install_coc-nvim ;;
 	12)
 		install_miniconda ;;
+		
+	13)     install_ssl_onekey_cfapi ;;
 
 
 	*)
