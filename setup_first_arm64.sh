@@ -295,7 +295,8 @@ do
 	12)
 		install_miniconda ;;
 		
-	13)     install_ssl_onekey_cfapi ;;
+	13)     
+		install_ssl_onekey_cfapi ;;
 
 
 	*)
