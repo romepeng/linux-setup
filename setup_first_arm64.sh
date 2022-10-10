@@ -171,11 +171,11 @@ Install_ssl_onekey_cfapi(){
     LOGI "3.域名已通过Cloudflare进行解析到当前服务器"
     LOGI "4.该脚本申请证书默认安装路径为/root/cert目录"
     confirm "我已确认以上内容[y/n]""y"
-    if[ $? -eq 0 ];then
+    if[ $? -eq 0 ]; then
         cd~
         LOGI "安装Acme脚本"
         curl https://get.acme.sh |sh
-        if[ $? -ne 0 ];then
+        if[ $? -ne 0 ]; then
             LOGE "安装acme脚本失败"
             exit1
         fi
@@ -183,7 +183,7 @@ Install_ssl_onekey_cfapi(){
         CF_GlobalKey=""
         CF_AccountEmail=""
         certPath=/root/cert
-        if[ !-d"$certPath"];then
+        if[ !-d"$certPath"]; then
             mkdir $certPath
         else
             rm -rf $certPath
@@ -199,14 +199,14 @@ Install_ssl_onekey_cfapi(){
         read-p "Input your email here:"CF_AccountEmail
         LOGD "你的注册邮箱为:${CF_AccountEmail}"
         ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-        if[ $? -ne 0 ];then
+        if[ $? -ne 0 ]; then
             LOGE "修改默认CA为Lets'Encrypt失败,脚本退出"
             exit1
         fi
         exportCF_Key="${CF_GlobalKey}"
         exportCF_Email=${CF_AccountEmail}
         ~/.acme.sh/acme.sh --issue --dns dns_cf -d ${CF_Domain}-d *.${CF_Domain}--log
-        if[ $? -ne 0 ];then
+        if[ $? -ne 0 ]; then
             LOGE "证书签发失败,脚本退出"
             exit1
         else
@@ -222,7 +222,7 @@ Install_ssl_onekey_cfapi(){
             LOGI "证书安装成功,开启自动更新..."
         fi
         ~/.acme.sh/acme.sh --upgrade --auto-upgrade
-        if[ $? -ne 0 ];then
+        if[ $? -ne 0 ]; then
             LOGE "自动更新设置失败,脚本退出"
             ls -lah cert
             chmod 755 $certPath
