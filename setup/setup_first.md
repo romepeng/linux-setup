@@ -42,8 +42,10 @@ sudo nopasswd
 # linux install  poetry
 
 curl -sSL https://install.python-poetry.org | python3 -
+# add poetry to path
+nano ~/.bashrc
+export PATH="/home/rome/.local/bin:$PATH"
 
-add 
 
 
 # to different os or arch(cpu) 
