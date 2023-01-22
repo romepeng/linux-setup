@@ -39,7 +39,11 @@ sudo nopasswd
 
 #nginx / ssl
 
+# linux install  poetry
 
+curl -sSL https://install.python-poetry.org | python3 -
+
+add 
 
 
 # to different os or arch(cpu) 
