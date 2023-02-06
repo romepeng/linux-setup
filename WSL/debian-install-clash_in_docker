@@ -23,7 +23,8 @@ docker run -d  --name clash \
 -v /opt/clash/ui:/opt/clash/ui \
  dreamacro/clash 
  
-docker exec -it clash /bin/bash
+docker exec -it clash /bin/sh
+check /root/.config/clash  /opt/clash
 
 #check network listening
 netstat -tulpen
@@ -32,8 +33,3 @@ netstat -lvup
 web :
 
 https://clash.razord.top/#/proxies
-
-
-
-
-
