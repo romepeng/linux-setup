@@ -30,9 +30,12 @@ docker version
 
 add user rome to docker grp:
 
-apt install docker-ce-rootless-extras
+sudo addgroup docker
 
-sudo usermod -aG docker $USER
+sudo usermod -aG docker rome 
+
+newgrp - docker
+
 
 dokcer-compose  also okokok
 
