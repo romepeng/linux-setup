@@ -1,0 +1,39 @@
+# wsl --install -d Ddebian
+
+install net-tools wget  python3-pip unzip gzip
+
+sudo -i
+
+mkdir -p /opt/clash
+cd /opt//clash
+
+#下载clash 配置文件config.yaml 在代理商那里复制订阅链接，替代 [订阅链接]
+wget -O config.yaml [订阅链接]
+
+#下载Country.mmdb 
+wget -O Country.mmdb https://www.sub-speeder.com/client-download/Country.mmdb
+
+
+install clash by docker
+
+docker run -d  --name clash \
+ --restart=always \
+-p 7890:7890 -p 7891:7891 -p 9090:9090 \
+-v /opt/clash/config.yaml:/root/.config/clash/config.yaml \
+-v /opt/clash/ui:/opt/clash/ui \
+ dreamacro/clash 
+ 
+docker exec -it clash /bin/bash
+
+#check network listening
+netstat -tulpen
+netstat -lvup
+
+web :
+
+https://clash.razord.top/#/proxies
+
+
+
+
+
