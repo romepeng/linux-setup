@@ -26,6 +26,11 @@ conda update conda
 
 conda activate /deactivate
 
+su - rome
+source /opt/conda/etc/profile.d/conda.sh
+conda env list
+
+
 also:
 
 #!/bin/bash
