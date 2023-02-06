@@ -1,2 +1,2 @@
 # linux-onekey-setup
-linux(centos, debain,ubuntu) setup onekey shell script
+linux(debain,ubuntu) setup onekey shell script
