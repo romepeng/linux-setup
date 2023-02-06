@@ -1,0 +1,16 @@
+
+# enable systemd
+
+nano /etc/wsl.conf
+
+[boot]
+systemd=true
+
+exit
+
+c:> wsl -l -v
+wsl --shutdown
+
+check:
+
+sudo systemd status ssh
